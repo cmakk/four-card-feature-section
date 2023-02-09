@@ -1,0 +1,137 @@
+:root {
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+	--dark-blue: hsl(234, 12%, 80%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--light-gray: hsl(0, 0%, 98%);
+	
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	max-height: 100%;
+}
+
+body {
+	background-color: var(--light-gray);
+	margin: auto;
+}
+
+.wrapper {
+	height: 100vh;
+	width: 100%; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 200;
+	margin: 0px;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.info {
+	display: flex; 
+	text-align: center;
+	max-width: 55ch;
+	margin-bottom: 3rem;
+}
+
+h2 {
+	
+	font-size: 1rem;
+	font-weight: 200;
+}
+
+.featurescards {
+	display: grid;
+	/*grid-template-areas: 'empty team empty'
+						 'sup team calc'
+						 'sup karma calc'
+						 'empty karma empty';*/
+	grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+	justify-items: center;
+	align-items: center;
+	margin: auto;
+	grid-gap: 2rem;
+	max-width: 80%;
+}
+
+.featurescards > div {
+	background-color: #FFF;
+	border-radius: 0.25rem;
+	padding: 1.5rem;
+	box-shadow: 5px 10px 20px var(--dark-blue);
+	width: 85%;
+}
+
+.feature-name {
+	font-size: 1.25rem; 
+	padding-bottom: 0.5rem;
+	margin: 0;
+}
+
+.feature-desc {
+	font-weight: 200;
+	padding-bottom: 2rem;
+	margin: 0;
+} 
+
+.feature-img {
+	display: flex;
+	justify-content: right;
+}
+
+.feature-1 {
+	grid-area: 2 / 1 / span 2 / span 1;
+	border-top: 0.25rem solid var(--cyan);
+}
+
+.feature-2 {
+	grid-area: 1 / 2 / span 2 / span 1;
+	border-top: 0.25rem solid var(--red);
+}
+
+.feature-3 {
+	grid-area: 3 / 2 / span 2 / span 1;
+	border-top: 0.25rem solid var(--orange);
+}
+
+.feature-4 {
+	grid-area: 2 / 3 / span 2 / span 1;
+	border-top: 0.25rem solid var(--blue);
+}
+
+
+
+@media only screen and (max-width: 700px) {
+	.wrapper {
+		height: 100%;
+	}
+	
+	.featurescards {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+	}
+}
