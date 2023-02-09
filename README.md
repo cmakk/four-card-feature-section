@@ -21,3 +21,4 @@ Users should be able to:
 - I practiced both CSS Flexbox and Grid. 
 - I learned when to use "vh" vs "%" and when to use "max-width" vs "width".
 - I practiced Handlebars again, this time incorporating classes into it as well.
+- The design specs were to change for a mobile device of max-width: 375px, but I put the condition as max-width: 700px because the page looked more natural with a switch at that width.
